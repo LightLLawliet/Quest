@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Quest</string>
+    <string name="awakening">You woke up. There are table and chest in the room.
+        What to do next? Approach the table or try to open the chest</string>
+    <string name="awakening_action_first">Approach the table</string>
+    <string name="awakening_action_second">open the chest</string>
+    <string name="table_case">You found the note! ("Find me near the forest, I will be waiting for you there") What to do next? Leave the room or open the chest?</string>
+    <string name="table_case_action_first">Leave the room</string>
+    <string name="table_case_action_second">Open the chest</string>
+    <string name="open_the_chest">There are old-fashioned cape and sharp-blade sword in there!</string>
+</resources>
