@@ -3,10 +3,15 @@
     {
       "id": "1",
       "text": "You woke up. There are table and chest in the room. What to do next? Approach the table or try to open the chest",
+      "actionsIdList": [
+        "1000001",
+        "1000002"
+      ],
       "actions": [
         {
           "key": "Approach the table",
-          "action": "2"
+          "action": "2",
+          "type": "goToScreen"
         },
         {
           "key": "open the chest",
@@ -34,7 +39,9 @@
       "actions": [
         {
           "key": "drink a poison",
-          "action": "5"
+          "action": "5",
+          "type": "showMessage",
+          "message": "LMAO"
         }
       ]
     },
@@ -47,6 +54,11 @@
           "action": "1"
         }
       ]
+    }
+  ],
+  "action": [
+    {
+      "id": "1000001"
     }
   ]
 }

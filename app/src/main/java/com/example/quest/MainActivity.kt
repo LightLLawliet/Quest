@@ -1,6 +1,7 @@
 package com.example.quest
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quest.databinding.ActivityMainBinding
 import com.google.gson.Gson
@@ -27,5 +28,9 @@ class MainActivity : AppCompatActivity(), ActionCallback {
 
     override fun moveToScreen(id: String) {
         viewModel.nextScreen(id)
+    }
+
+    override fun showMessage(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
