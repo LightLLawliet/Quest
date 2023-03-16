@@ -1,27 +1,31 @@
 package com.example.quest
 
 import android.os.Bundle
-import android.text.SpannableString
-import android.text.style.ClickableSpan
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quest.databinding.ActivityMainBinding
+import com.google.gson.Gson
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), ActionCallback {
+
+    private lateinit var viewModel: MainViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         val textView = binding.textView
-        val awakening = getString(R.string.awakening)
-        val awakeningActionFirst = getString(R.string.awakening_action_first)
-        val awakeningActionSecond = getString(R.string.awakening_action_second)
-        val spannableString = SpannableString(awakening)
-
-        val awakeningActionFirstClickSpan = object : ClickableSpan() {
-            override fun onClick(widget: View) {
-                //todo move to screen two
-            }
-        }
         setContentView(binding.root)
+        viewModel = MainViewModel(
+            Repository.Base(this, ReadRawResource.Base(applicationContext), Gson())
+        )
+
+        viewModel.liveData.observe(this) {
+            it.show(textView)
+        }
+
+        viewModel.nextScreen("1")
+    }
+
+    override fun moveToScreen(id: String) {
+        viewModel.nextScreen(id)
     }
 }

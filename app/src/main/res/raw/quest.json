@@ -1,0 +1,52 @@
+{
+  "screens": [
+    {
+      "id": "1",
+      "text": "You woke up. There are table and chest in the room. What to do next? Approach the table or try to open the chest",
+      "actions": [
+        {
+          "key": "Approach the table",
+          "action": "2"
+        },
+        {
+          "key": "open the chest",
+          "action": "3"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "text": "You found the note! (\"Find me near the forest, I will be waiting for you there\") What to do next? Leave the room or open the chest",
+      "actions": [
+        {
+          "key": "Leave the room",
+          "action": "4"
+        },
+        {
+          "key": "open the chest",
+          "action": "3"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "text": "There are old-fashioned cape and sharp-blade sword in there! What's next? Leave the room or drink a poison? xD",
+      "actions": [
+        {
+          "key": "drink a poison",
+          "action": "5"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "text": "You died!\n\n Wanna start again?",
+      "actions": [
+        {
+          "key": "start again",
+          "action": "1"
+        }
+      ]
+    }
+  ]
+}
