@@ -1,4 +1,4 @@
-package com.example.quest
+package com.example.quest.presentation
 
 import android.content.Context
 import androidx.annotation.RawRes

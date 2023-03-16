@@ -1,8 +1,9 @@
-package com.example.quest
+package com.example.quest.presentation
 
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.quest.data.Repository
 import com.example.quest.databinding.ActivityMainBinding
 import com.google.gson.Gson
 
@@ -32,5 +33,13 @@ class MainActivity : AppCompatActivity(), ActionCallback {
 
     override fun showMessage(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onBackPressed() {
+        if (viewModel.canGoBack()) {
+            viewModel.goBack()
+        } else {
+            super.onBackPressed()
+        }
     }
 }

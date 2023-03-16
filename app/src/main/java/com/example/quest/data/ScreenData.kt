@@ -1,4 +1,4 @@
-package com.example.quest
+package com.example.quest.data
 
 import com.google.gson.annotations.SerializedName
 

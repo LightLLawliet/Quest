@@ -1,7 +1,10 @@
-package com.example.quest
+package com.example.quest.data
 
-import android.content.Context
-import androidx.annotation.RawRes
+import com.example.quest.R
+import com.example.quest.presentation.ActionCallback
+import com.example.quest.presentation.ActionUi
+import com.example.quest.presentation.ReadRawResource
+import com.example.quest.presentation.ScreenUi
 import com.google.gson.Gson
 
 interface Repository {

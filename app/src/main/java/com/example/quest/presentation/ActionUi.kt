@@ -1,4 +1,4 @@
-package com.example.quest
+package com.example.quest.presentation
 
 import android.graphics.Color
 import android.text.SpannableString

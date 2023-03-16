@@ -1,12 +1,8 @@
-package com.example.quest
+package com.example.quest.presentation
 
 import android.graphics.Color
 import android.text.SpannableString
-import android.text.Spanned
-import android.text.TextPaint
 import android.text.method.LinkMovementMethod
-import android.text.style.ClickableSpan
-import android.view.View
 import android.widget.TextView
 
 class ScreenUi(
